@@ -1,0 +1,25 @@
+{
+  "name": "warsawjs-workshop-26-my-photos",
+  "version": "1.0.0",
+  "description": "## Features [] - wyświetl zdjęcia z katalogu `images` - tablice, pętle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woprzech/warsawjs-workshop-26-my-photos.git"
+  },
+  "author": "Wojtek Przechodzeń <wprzecho@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woprzech/warsawjs-workshop-26-my-photos/issues"
+  },
+  "homepage": "https://github.com/woprzech/warsawjs-workshop-26-my-photos#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "parcel-bundler": "^1.10.3"
+  }
+}

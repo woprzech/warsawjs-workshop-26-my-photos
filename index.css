@@ -1,0 +1,8 @@
+.images__image {
+    width: 300px;
+    height: 300px;
+}
+
+.image--favourite {
+    border: 10px solid red;
+}
