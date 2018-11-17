@@ -6,10 +6,10 @@
     + wyświetl zdjęcia z katalogu `images` - tablice, pętle
 
 * Dodawanie zdjęcia do ulubionych
-    + dodaj klasę "image--favourite" po kliknięciu w ulubione zdjęcie - arrow function
+    + dodaj odpowiednie style po kliknięciu w zdjęcie - arrow function
 
 * Usuwanie zdjęć z ulubionych
-    + usuń klasę "image--favourite" jeżeli użytkownik odkliknął ulubione zdjęcie
+    + usuń style jeżeli użytkownik odkliknął ulubione zdjęcie
 
 * Refactoring 
     + użyj klas do stworzenia obiektu zdjęcia - class
