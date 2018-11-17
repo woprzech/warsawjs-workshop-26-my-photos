@@ -28,3 +28,8 @@
 
 * Integracja z API
     + pobierz zdjęcia z serwera - fetch, then, Promise
+    + zaznacz i oznacz zdjęcia jako ulubione - operacja PATCH
+    + dodaj nowe zdjęcie - FileAPI + POST
+    
+* **Dodatkowo** ostylowanie galerii zdjęć
+    + użyj gotowych komponentów żeby aplikacja wyglądała atrakcyjnie - np. Bulma, Bootstrap
