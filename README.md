@@ -1,6 +1,7 @@
 # WarsawJS Workshop #26 - JavaScript dla początkujących
 
 ## Zadania
+
 * Wyświetlanie zdjęć
     + wyświetl zdjęcia z katalogu `images` - tablice, pętle
 
