@@ -1,18 +1,23 @@
 import {Image} from './image';
-import butyIMG from './images/warsawjs.png';
-import bydgoszczIMG from './images/confront.png';
 
 console.log('warsawJS workshop');
 
+let currentImages;
 
 let fileInput = document.getElementById('file-input');
 fileInput.onchange = () => {
     if (fileInput.files && fileInput.files[0]) {
         const reader = new FileReader();
 
-        reader.onload = function (e) {
-            allImages.push(new Image(e.target.result));
-            showedImages = allImages;
+        reader.onload = async (e) =>  {
+            const fileName = e.target.result;
+            await fetch(`http://localhost:3000/photos`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({url: fileName, isFavourite: false})
+            });
             render();
         };
 
@@ -20,23 +25,34 @@ fileInput.onchange = () => {
     }
 };
 
-document.getElementById('show-favourites').addEventListener('click', () => {
-    showedImages = allImages.filter(image => image.isFavourite());
-    render()
+document.getElementById('show-favourites').addEventListener('click', async () => {
+    const allImages = await getAllImages();
+    currentImages = allImages.filter(image => image.isFavourite());
+    renderGallery();
+
 });
 document.getElementById('sort-images').addEventListener('click', () => {
-    showedImages.sort((i1, i2) => i1.isFavourite() && i2.isFavourite() ? 0 : i1.isFavourite() ? -1 : 1);
-    render();
+    currentImages.sort((i1, i2) => i1.isFavourite() && i2.isFavourite() ? 0 : i1.isFavourite() ? -1 : 1);
+    renderGallery();
 });
 
-const allImages = [new Image(butyIMG), new Image(bydgoszczIMG)];
-let showedImages = allImages;
 
-function render() {
+function renderGallery() {
     document.getElementById('images').innerHTML = '';
-    showedImages
+    currentImages
         .forEach((image) => image.show());
 }
 
-render(allImages);
+async function getAllImages() {
+    const response = await fetch('http://localhost:3000/photos');
+    const imagesData = await response.json();
+    return  imagesData.map(image => new Image(image.id, image.url, image.isFavourite));
+};
 
+async function render() {
+    currentImages = await getAllImages();
+
+    renderGallery();
+}
+
+render();

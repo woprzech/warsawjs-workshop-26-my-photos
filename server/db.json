@@ -1,0 +1,22 @@
+{
+  "photos": [
+    {
+      "id": 1,
+      "title": "My friend",
+      "url": "https://picsum.photos/650/400/?image=160",
+      "isFavourite": false
+    },
+    {
+      "id": 2,
+      "title": "My best photo",
+      "url": "https://picsum.photos/650/400/?image=200",
+      "isFavourite": false
+    },
+    {
+      "id": 3,
+      "title": "My office",
+      "url": "https://picsum.photos/650/400/?image=201",
+      "isFavourite": true
+    }
+  ]
+}
