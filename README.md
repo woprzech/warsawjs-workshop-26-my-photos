@@ -10,6 +10,7 @@
 
 * Usuwanie zdjęć z ulubionych
     + usuń style jeżeli użytkownik odkliknął ulubione zdjęcie
+    + **Dodatkowe** stwórz tylko jeden eventHandler zamiast jednego dla każdego zdjęcia
 
 * Refactoring 
     + użyj klas do stworzenia obiektu zdjęcia - class
