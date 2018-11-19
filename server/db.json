@@ -4,7 +4,7 @@
       "id": 1,
       "title": "My friend",
       "url": "https://picsum.photos/650/400/?image=160",
-      "isFavourite": false
+      "isFavourite": true
     },
     {
       "id": 2,
